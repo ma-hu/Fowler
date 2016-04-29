@@ -14,6 +14,7 @@ class Customer {
     public String getName (){
         return name;
     };
+    //first changes have been made in the original repository where I got my ZIP-Project from!
     public String statement() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
