@@ -5,9 +5,9 @@ abstract class Price {
     abstract int getPriceCode();
 
     //move method -> getCharge from move to price
-    double getCharge(int daysRented, Movie movie) {
+    double getCharge(int daysRented) {
         double result = 0;
-        switch (movie.getPriceCode()) {
+        switch (getPriceCode()) {
             case Movie.REGULAR:
                 result += 2;
                 if (daysRented > 2)
