@@ -23,12 +23,10 @@ class Customer {
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
         while (enum_rentals.hasMoreElements()) {
-            double thisAmount = 0;
             Rental each = (Rental) enum_rentals.nextElement();
-            frequentRenterPoints = each.getFrequentRenterPoints(frequentRenterPoints);
+            frequentRenterPoints += each.getFrequentRenterPoints();
 
             //show figures for this rental
-            //replace parameter with explicit methods
             result += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(each.getCharge()) + "\n";
             totalAmount += each.getCharge();
         }
@@ -38,12 +36,6 @@ class Customer {
         return result;
     }
 
-    /*
-    now I should have done some steps - calling the "new" method from the body of the old amountFor,
-    searching all usage and replace it with the new method ....
-    but I used the move method tool of IntelliJ IDEA,
-    so all this is done in the previous step just by using the IDE !!!
-     */
 
 }
     
