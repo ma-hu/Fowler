@@ -24,7 +24,7 @@ class Customer {
 
             //show figures for each rental
             result += each.getMovie().getTitle()+ ": " +
-                    String.valueOf(each.movie._price.getCharge(each.getDaysRented(), each.movie)) + "<BR>\n";
+                    String.valueOf(each.movie._price.getCharge(each.getDaysRented())) + "<BR>\n";
         }
         //add footer lines
         result += "<P>You owe <EM>" + String.valueOf(getTotalCharge()) +
@@ -52,7 +52,7 @@ class Customer {
         Enumeration enum_rentals = rentals.elements();
         while (enum_rentals.hasMoreElements()){
             Rental each = (Rental) enum_rentals.nextElement();
-            result += each.movie._price.getCharge(each.getDaysRented(), each.movie);
+            result += each.movie._price.getCharge(each.getDaysRented());
         }
         return result;
     }
