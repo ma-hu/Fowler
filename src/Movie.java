@@ -6,7 +6,8 @@ public class Movie {
     private int priceCode;
     public Movie(String newtitle, int newpriceCode) {
         title = newtitle;
-        priceCode = newpriceCode;
+        // Replace Type Code with State/Strategy.
+        setPriceCode(newpriceCode);
     }
     public int getPriceCode() {
         return priceCode;
