@@ -16,15 +16,12 @@ class Customer {
     };
     //first changes have been made in the original repository where I got my ZIP-Project from!
     public String statement() {
-        int frequentRenterPoints = 0;
         Enumeration enum_rentals = rentals.elements();	    
         String result = "Rental Record for " + this.getName() + "\n";
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
         while (enum_rentals.hasMoreElements()) {
             Rental each = (Rental) enum_rentals.nextElement();
-            frequentRenterPoints += each.getFrequentRenterPoints();
-
             //show figures for this rental
             result += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(each.getCharge()) + "\n";
         }
