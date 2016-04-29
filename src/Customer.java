@@ -42,5 +42,12 @@ class Customer {
         return result;
     }
 
+    /*
+    now I should have done some steps - calling the "new" method from the body of the old amountFor,
+    searching all usage and replace it with the new method ....
+    but I used the move method tool of IntelliJ IDEA,
+    so all this is done in the previous step just by using the IDE !!!
+     */
+
 }
     
